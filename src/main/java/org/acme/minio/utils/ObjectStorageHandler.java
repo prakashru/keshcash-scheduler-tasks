@@ -106,8 +106,8 @@ public class ObjectStorageHandler {
 		
 		String bucketNameFromUserName = aUserName.substring(0,1).toLowerCase()+"000";
 		
-		String objectName = userUniqueId+"/"+"OlivPosterBakery.jpeg";
-		String filePath = "/Users/prakashdutta/Desktop/OlivPosterBakery.jpeg";
+		String objectName = userUniqueId+"/"+"WhatsAppImage.jpeg";
+		String filePath = "/Users/prakashdutta/Desktop/WhatsAppImage.jpeg";
 		
 		mc.createBucketIfNotExists(bucketNameFromUserName);
 		mc.uploadObjectFromPath(bucketNameFromUserName, objectName, filePath);
