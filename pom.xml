@@ -21,10 +21,10 @@
 		<quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
 		<quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
 		<!-- <quarkus.platform.version>1.11.7.Final</quarkus.platform.version> 
-		<surefire-plugin.version>3.0.0-M5</surefire-plugin.version>-->
+			<surefire-plugin.version>3.0.0-M5</surefire-plugin.version> -->
 		<quarkus.platform.version>1.9.2.Final</quarkus.platform.version>
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
-		
+
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -43,17 +43,18 @@
 			<artifactId>quarkus-rest-client</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-resteasy-jsonb</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-multipart-provider</artifactId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>4.0.0.Beta5</version>
 		</dependency>
-		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-resteasy-multipart</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-resteasy</artifactId>
-		</dependency>
+		<!-- <dependency> <groupId>org.jboss.resteasy</groupId> <artifactId>resteasy-multipart-provider</artifactId> 
+			</dependency> <dependency> <groupId>io.quarkus</groupId> <artifactId>quarkus-resteasy-multipart</artifactId> 
+			</dependency> <dependency> <groupId>io.quarkus</groupId> <artifactId>quarkus-resteasy</artifactId> 
+			</dependency> -->
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-arc</artifactId>
@@ -83,13 +84,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		 <dependency>
+		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>okhttp</artifactId>
 			<version>4.8.1</version>
-		</dependency> 
+		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>logging-interceptor</artifactId>
 			<version>4.4.0</version>
@@ -99,7 +100,7 @@
 					<artifactId>okhttp</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
@@ -112,8 +113,7 @@
 					<execution>
 						<goals>
 							<goal>build</goal>
-							<!-- <goal>generate-code</goal>
-							<goal>generate-code-tests</goal> -->
+							<!-- <goal>generate-code</goal> <goal>generate-code-tests</goal> -->
 						</goals>
 					</execution>
 				</executions>
